@@ -1,0 +1,11 @@
+CREATE DATABASE mydb;
+USE mydb;
+
+CREATE TABLE contacts (
+id INT auto_increment PRIMARY Key,
+first_name varchar(100),
+last_name varchar(100),
+address varchar(255),
+phone_number varchar(20)
+)
+SELECT * FROM contacts;
