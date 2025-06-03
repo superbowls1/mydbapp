@@ -22,7 +22,7 @@ public class App {
             Connection conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/mydb?useSSL=false&serverTimezone=UTC", 
                 "root", 
-                "Joey#112"
+                "pwd"
             );
 
             String sql = "INSERT INTO contacts (first_name, last_name, address, phone_number) VALUES (?, ?, ?, ?)";
