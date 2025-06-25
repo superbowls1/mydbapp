@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App Sign-Up</title>
+  <style>
+    body {
+      background-color: #f0f8ff;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 300px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #clientForm {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Create Your Account</h1>
+
+  <form id="signupForm">
+    <input type="text" placeholder="First Name" required>
+    <input type="text" placeholder="Last Name" required>
+    <input type="email" placeholder="Email" required>
+    <button type="submit">Create Account</button>
+  </form>
+
+  <form id="clientForm">
+    <h1>Enter Client Names</h1>
+    <input type="text" placeholder="Client Name" required>
+    <button type="submit">Save Client</button>
+  </form>
+
+  <script>
+    const signupForm = document.getElementById('signupForm');
+    const clientForm = document.getElementById('clientForm');
+
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // stop actual submission
+      signupForm.style.display = 'none';
+      clientForm.style.display = 'flex';
+    });
+  </script>
+
+</body>
+</html>
